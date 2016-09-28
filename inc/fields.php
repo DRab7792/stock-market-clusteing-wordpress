@@ -90,7 +90,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_57eb47c620b8c',
 			'label' => 'Fonts',
-			'name' => 'fonts',
+			'name' => 'font',
 			'type' => 'repeater',
 			'instructions' => '',
 			'required' => 0,
