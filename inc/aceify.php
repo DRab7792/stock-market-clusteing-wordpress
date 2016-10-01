@@ -17,7 +17,7 @@ function remove_menus(){
 	//	remove_menu_page( 'options-general.php' ); //Hide Settings
 	}
 }
-add_action( 'admin_menu', 'remove_menus' );
+// add_action( 'admin_menu', 'remove_menus' );
 
 //remove unwanted wordpress <head> tags
 remove_action('wp_head', 'wlwmanifest_link');
