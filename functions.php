@@ -23,3 +23,5 @@ require_once( PORTFILO_THEME_DIR. '/inc/aceify.php' );
 require_once( PORTFILO_THEME_DIR. '/inc/post_types.php' );
 
 require_once( PORTFILO_THEME_DIR. '/inc/fields.php' );
+
+require_once( PORTFILO_THEME_DIR. '/inc/rest.php' );

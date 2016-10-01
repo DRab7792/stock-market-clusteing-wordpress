@@ -1,11 +1,16 @@
 <?php
 
 $fields = array("colors", "font", "paper", "proposal", "bibli");
-$meta = array();
+$ret = array("theme" => array());
 
 foreach ($fields as $cur) {
-	$meta[$cur] = get_field($cur, "options");
+	$ret['theme'][$cur] = get_field($cur, "options");
 }
 
+$menu = wp_get_nav_menu_items('main');
 
-echo json_encode($meta);
+if ($menu){
+	$ret['nav'] = $menu;
+}
+
+echo json_encode($ret);
