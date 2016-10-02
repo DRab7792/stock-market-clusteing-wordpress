@@ -1,6 +1,6 @@
 <?php
 
-$fields = array("colors", "font", "paper", "proposal", "bibli");
+$fields = array("colors", "font", "paper", "proposal", "bibliography");
 $ret = array("theme" => array());
 
 foreach ($fields as $cur) {
