@@ -10,6 +10,8 @@ function my_myme_types($mime_types){
 
     $mime_types['latex'] = 'application/x-latex';
 
+    $mime_types['tex'] = 'application/x-tex';
+
     $mime_types['bibtex'] = 'application/x-bibtex';
 
     return $mime_types;
