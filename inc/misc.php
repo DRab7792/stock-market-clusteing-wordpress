@@ -14,7 +14,7 @@ function my_myme_types($mime_types){
 
     $mime_types['bibtex'] = 'application/x-bibtex';
 
-    $mime_types['bib'] = 'application/x-bib';
+    $mime_types['bib'] = 'application/octet-stream';
 
     return $mime_types;
 
