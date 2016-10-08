@@ -253,7 +253,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_57f928a398869',
 			'label' => 'Type',
-			'name' => 'type',
+			'name' => 'hero_type',
 			'type' => 'radio',
 			'instructions' => '',
 			'required' => 1,
@@ -277,7 +277,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_57f928f79886a',
 			'label' => 'Asset',
-			'name' => 'asset',
+			'name' => 'hero_asset',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 1,
@@ -296,7 +296,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_57f929129886b',
 			'label' => 'Title',
-			'name' => 'title',
+			'name' => 'hero_title',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 1,
