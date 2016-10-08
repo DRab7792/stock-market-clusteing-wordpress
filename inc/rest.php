@@ -13,6 +13,9 @@ function add_meta_fields($data, $post, $context){
 			//Split meta into sections
 			if (stristr($key, "_") !== FALSE){
 				$pair = explode("_", $key);
+				if (count($pair) > 2){
+					print_r($pair);
+				}
 				if (!isset($adjMeta->{$pair[0]})){
 					$adjMeta->{$pair[0]} = new stdClass();
 				}
