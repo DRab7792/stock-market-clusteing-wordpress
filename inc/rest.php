@@ -4,9 +4,22 @@ function add_meta_fields($data, $post, $context){
 	$meta = get_post_meta($post->ID);
 
 	$adjMeta = new stdClass();
+	$adjMeta->misc = new stdClass();
 	foreach ($meta as $key => $val) {
 		if ($key[0] != "_"){
-			$adjMeta->{$key} = $val;
+			//Flatten array to object if there is only one object in it
+			$adjVal = (is_array($val) && count($val) === 1) ? $val[0] : $val;
+
+			//Split meta into sections
+			if (stristr($key, "_") !== FALSE){
+				$pair = split("_", $str);
+				if (!isset($adjMeta->{$pair[0]})){
+					$adjMeta->{$pair[0]} = new stdClass();
+				}
+				$adjMeta->{$pair[0]}->{$pair[1]} = $adjVal;
+			}else{
+				$adjMeta->misc->{$key} = $adjVal;
+			}
 		}
 	}
 
