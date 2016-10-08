@@ -6,7 +6,7 @@ function add_meta_fields($data, $post, $context){
 	$adjMeta = new stdClass();
 	foreach ($meta as $key => $val) {
 		if ($key[0] === "_"){
-			$adjMeta[$key] = $val;
+			$adjMeta->{$key} = $val;
 		}
 	}
 
