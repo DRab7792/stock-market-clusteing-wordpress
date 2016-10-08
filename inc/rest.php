@@ -13,13 +13,23 @@ function add_meta_fields($data, $post, $context){
 			//Split meta into sections
 			if (stristr($key, "_") !== FALSE){
 				$pair = explode("_", $key);
+				//Repeater field
 				if (count($pair) > 2){
-					print_r($pair);
+					$index = intval($pair[1]);
+					if (!isset($adjMeta->{$pair[0]})){
+						$adjMeta->{$pair[0]} = array();
+					}
+					if (!isset($adjMeta->{$pair[0]}[$index])){
+						$adjMeta->{$pair[0]}[] = new stdClass();
+					}
+					$adjMeta->{$pair[0]}[$index]->{$pair[2]} = $adjVal;
+				}else{
+					if (!isset($adjMeta->{$pair[0]})){
+						$adjMeta->{$pair[0]} = new stdClass();
+					}
+					$adjMeta->{$pair[0]}->{$pair[1]} = $adjVal;
 				}
-				if (!isset($adjMeta->{$pair[0]})){
-					$adjMeta->{$pair[0]} = new stdClass();
-				}
-				$adjMeta->{$pair[0]}->{$pair[1]} = $adjVal;
+				
 			}else{
 				$adjMeta->misc->{$key} = $adjVal;
 			}
