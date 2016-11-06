@@ -22,6 +22,8 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
+		"rest_base"          => "visuals-api",
+  		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"rewrite" => array( "slug" => "visual", "with_front" => true ),
 		"query_var" => true,
 		
