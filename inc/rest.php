@@ -41,3 +41,4 @@ function add_meta_fields($data, $post, $context){
 	return $data;
 }
 add_filter('rest_prepare_page', 'add_meta_fields', 10, 3);
+add_filter('rest_prepare_visual', 'add_meta_fields', 10, 3);
