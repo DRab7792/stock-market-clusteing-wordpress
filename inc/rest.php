@@ -9,6 +9,9 @@ function add_meta_fields($data, $post, $context){
 		if ($key[0] != "_"){
 			//Flatten array to object if there is only one object in it
 			$adjVal = (is_array($val) && count($val) === 1) ? $val[0] : $val;
+			if (unserialize($adjVal)){
+				$adjVal = unserialize($adjVal);
+			}
 
 			//Split meta into sections
 			if (stristr($key, "_") !== FALSE){
