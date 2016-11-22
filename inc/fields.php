@@ -696,6 +696,51 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_5833ce5297c1c',
+	'title' => 'Cluster Fields',
+	'fields' => array (
+		array (
+			'key' => 'field_5833ce5a6f7f4',
+			'label' => 'Number of Clusters',
+			'name' => 'clusters',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 1,
+			'max' => 8,
+			'step' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_582a89770b785',
 	'title' => 'Visualization Data and Meta Fields',
 	'fields' => array (
@@ -734,6 +779,7 @@ acf_add_local_field_group(array (
 			'choices' => array (
 				'histogram' => 'Category Histogram',
 				'lineChart' => 'Line Chart',
+				'clusters' => 'Clusters',
 			),
 			'default_value' => array (
 			),
@@ -854,7 +900,7 @@ acf_add_local_field_group(array (
 			'name' => 'data_sectors',
 			'type' => 'checkbox',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => array (
 				array (
 					array (
@@ -882,9 +928,46 @@ acf_add_local_field_group(array (
 			'return_format' => 'array',
 		),
 		array (
+			'key' => 'field_5833cb64314b0',
+			'label' => 'Clusters',
+			'name' => 'data_clusters',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'cluster1' => 'Cluster 1',
+				'cluster2' => 'Cluster 2',
+				'cluster3' => 'Cluster 3',
+				'cluster4' => 'Cluster 4',
+				'cluster5' => 'Cluster 5',
+				'cluster6' => 'Cluster 6',
+				'cluster7' => 'Cluster 7',
+				'cluster8' => 'Cluster 8',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'array',
+		),
+		array (
 			'key' => 'field_582e89e03aa4d',
 			'label' => 'Default Sectors',
-			'name' => 'data_defaults',
+			'name' => 'default_sectors',
 			'type' => 'checkbox',
 			'instructions' => '',
 			'required' => 0,
@@ -913,6 +996,43 @@ acf_add_local_field_group(array (
 			'layout' => 'vertical',
 			'toggle' => 0,
 			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_5833cb7b314b1',
+			'label' => 'Default Clusters',
+			'name' => 'default_clusters',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'cluster1' => 'Cluster 1',
+				'cluster2' => 'Cluster 2',
+				'cluster3' => 'Cluster 3',
+				'cluster4' => 'Cluster 4',
+				'cluster5' => 'Cluster 5',
+				'cluster6' => 'Cluster 6',
+				'cluster7' => 'Cluster 7',
+				'cluster8' => 'Cluster 8',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'array',
 		),
 		array (
 			'key' => 'field_58307c2f758c9',
