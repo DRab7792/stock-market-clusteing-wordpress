@@ -7,6 +7,8 @@ foreach ($fields as $cur) {
 	$ret['theme'][$cur] = get_field($cur, "options");
 }
 
+$ret['data']['clusters'] = get_field('clusters', 'options');
+
 $menu = wp_get_nav_menu_items('main');
 
 if ($menu){
