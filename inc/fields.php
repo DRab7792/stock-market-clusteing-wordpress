@@ -779,4 +779,381 @@ acf_add_local_field_group(array (
 ));
 
 
+acf_add_local_field_group(array (
+	'key' => 'group_582a89770b785',
+	'title' => 'Visualization Data and Meta Fields',
+	'fields' => array (
+		array (
+			'key' => 'field_582a89b94e489',
+			'label' => 'Title',
+			'name' => 'title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array (
+			'key' => 'field_582a89e04e48a',
+			'label' => 'Type',
+			'name' => 'data_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'histogram' => 'Category Histogram',
+				'lineChart' => 'Line Chart',
+				'clusters' => 'Clusters',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_582a8bab4e48b',
+			'label' => 'Category',
+			'name' => 'data_category',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'histogram',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'sector' => 'Sector',
+				'industryGroup' => 'Industry Group',
+				'industry' => 'Industry',
+				'subIndustry' => 'Sub-Industry',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_582bd3f018736',
+			'label' => 'X Axis Label',
+			'name' => 'x-axis',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'histogram',
+					),
+				),
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'stockPrices',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array (
+			'key' => 'field_582bd40918737',
+			'label' => 'Y Axis Label',
+			'name' => 'y-axis',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'histogram',
+					),
+				),
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'stockPrices',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array (
+			'key' => 'field_582d2ddfe391c',
+			'label' => 'Sectors',
+			'name' => 'data_sectors',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'Information Technology' => 'Information Technology',
+				'Health Care' => 'Health Care',
+				'Financials' => 'Financials',
+				'Industrials' => 'Industrials',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'array',
+		),
+		array (
+			'key' => 'field_582e89e03aa4d',
+			'label' => 'Default Sectors',
+			'name' => 'default_sectors',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'Information Technology' => 'Information Technology',
+				'Health Care' => 'Health Care',
+				'Financials' => 'Financials',
+				'Industrials' => 'Industrials',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_5833cb7b314b1',
+			'label' => 'Default Clusters',
+			'name' => 'default_clusters',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'Cluster 1' => 'Cluster 1',
+				'Cluster 2' => 'Cluster 2',
+				'Cluster 3' => 'Cluster 3',
+				'Cluster 4' => 'Cluster 4',
+				'Cluster 5' => 'Cluster 5',
+				'Cluster 6' => 'Cluster 6',
+				'Cluster 7' => 'Cluster 7',
+				'Cluster 8' => 'Cluster 8',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'array',
+		),
+		array (
+			'key' => 'field_5839dcc7656ea',
+			'label' => 'Default Combined',
+			'name' => 'default_combined',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'Combined 1' => 'Combined 1',
+				'Combined 2' => 'Combined 2',
+				'Combined 3' => 'Combined 3',
+				'Combined 4' => 'Combined 4',
+				'Combined 5' => 'Combined 5',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_58307c2f758c9',
+			'label' => 'Function',
+			'name' => 'data_function',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'average' => 'Daily Average',
+				'stdDeviation' => 'Standard Deviation',
+				'smooth' => 'Smooth Standard Deviation',
+				'ranges' => 'Ranges',
+			),
+			'allow_null' => 1,
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'vertical',
+			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_5833e14f4b6bf',
+			'label' => 'Groups',
+			'name' => 'data_groups',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582a89e04e48a',
+						'operator' => '==',
+						'value' => 'lineChart',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'clusters' => 'Clusters',
+				'sectors' => 'Sectors',
+				'combined' => 'Combined',
+			),
+			'default_value' => array (
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'visual',
+			),
+		),
+	),
+	'menu_order' => 2,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
 endif;
