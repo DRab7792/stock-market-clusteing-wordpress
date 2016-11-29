@@ -884,7 +884,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_582a89e04e48a',
 						'operator' => '==',
-						'value' => 'stockPrices',
+						'value' => 'lineChart',
 					),
 				),
 			),
@@ -918,7 +918,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_582a89e04e48a',
 						'operator' => '==',
-						'value' => 'stockPrices',
+						'value' => 'lineChart',
 					),
 				),
 			),
